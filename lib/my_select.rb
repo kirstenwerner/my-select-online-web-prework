@@ -11,6 +11,7 @@ def my_select(collection)
     if boolean_collection[l] == true 
       new_collection.push(boolean_collection[l])
     end
+    l += 1 
   end
   new_collection 
 end
