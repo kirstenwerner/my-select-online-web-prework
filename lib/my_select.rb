@@ -1,17 +1,10 @@
 def my_select(collection)
   i = 0
-  boolean_collection = []
+  new_collection = []
   while (i < collection.length) do 
-    boolean_collection.push(yield collection[i])
+    if (yield collection[i]) == true 
+      new_collection.push(collection[i])
     i += 1 
   end 
-  l = 0 
-  new_collection = []
-  while (l < boolean_collection.length) do
-    if boolean_collection[l] == true 
-      new_collection.push(boolean_collection[l])
-    end
-    l += 1 
-  end
   new_collection 
 end
